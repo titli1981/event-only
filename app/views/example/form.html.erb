@@ -1,4 +1,35 @@
-example@form page
+
+<%= form_for @job_application do |f| %>
+<p>
+  <%= f.label :full_name %>
+  <%= f.text_field :full_name %>
+</p>
+<p>
+  <%= f.label :phone %>
+  <%= f.telephone_field :phone %>
+</p>
+<p>
+  <%= f.label :hobby %>
+  <%= f.text_field :hobby %>
+</p>
+<p>
+  <%= f.label :years_experience %>
+  <%= f.number_field :years_experience %>
+</p>
+<p>
+  <%= f.label :available_date%>
+  <%= f.date_field :available_date%>
+</p>
+<p>
+ <!-- <%#= f.submit "submit" %> -->
+  <%= f.submit %>  
+</p
+
+
+<% end %>
+
+<hr>
+
 
 <form class="new_job_application" id="new_job_application" action="/job_applications" accept-charset="UTF-8" method="post">
   <p>
@@ -29,4 +60,4 @@ example@form page
   <p>
     <input type="submit" name="commit" value="Create Job application" />
   </p>
-</form
+</form 

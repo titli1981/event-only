@@ -3,9 +3,40 @@
   <%= link_to 'New Location', new_location_path %>
 </p>
 
-<%# @locations.each do |location| %>
-  <%#= render 'location', location: location %>
-<%# end %>
+		<%# @locations.each do |location| %>
+		  <!-- <div class="location">
+		    <h3>City: <%#= location.city %></h3>
+		    <%#= location.description %><br />
+		    <%#= link_to image_tag(location.image, class: "location"), location %>
+		  </div>
+		<%# end %> -->
 
 
-<%= render @locations %>
+ <!--                     OR                        -->
+
+		<%# @locations.each do |location| %>
+		  <%#= render 'location', location: location %>
+		<%# end %>
+		<!--                     OR                        -->
+
+ <%= render @locations %> 
+
+
+
+<!--  DESCRIPTION:
+		Render is a method that takes arguments. The first argument is the name of the partial we want to render, leaving out the leading underscore.
+
+		<%#= render 'location' %> or <%#= render('location') %>
+
+		But this code is not sufficient to give the partial the location object that it needs. We therefore pass in the location object, whatever its name happens to be.We are using the name location in the partial, so we had better give it the same name when passing it. This is the left-hand side (the key) of the hash we are passing. The right-hand side (the value) is the location object itself. That is, in the show.html.erb file:
+
+	    <%#= render 'location', location: @location %>
+
+	    Rails also knows that if we ask it to render a collection of Location objects, it should iterate over that collection and call render on each object. Therefore, We can now also edit the index page again as well:
+
+
+        <%#= render @locations %>
+-->
+
+
+ 

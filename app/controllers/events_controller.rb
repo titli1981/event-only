@@ -26,7 +26,11 @@ class EventsController < ApplicationController
   end
 
   def new
+    
+    @location = Location.find(params[:location_id])
     @event = Event.new
+
+    @params = params
   end
 
   def create
